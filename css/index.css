@@ -46,6 +46,7 @@ h3 {
     align-items: center;
     justify-content: center;
   }
+  
 
   /* Show buttons only on screens smaller than 600px */
   @media (max-width: 600px) {
