@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    background-color: rgb(28, 27, 27);
+    font-family: "Major Mono Display", monospace;
+  }
+  canvas {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+  
+  }
+h3 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: lighter;
+    padding: 1em;
+    margin: 0.1em;
+    line-height: 1.5em;
+
+}
+  .controls {
+    display: none; /* Hide by default */
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .button  {
+    width: 50px;
+      height: 50px;
+      margin: 5px;
+      background-color: white;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+  
+  }
+  img {
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Show buttons only on screens smaller than 600px */
+  @media (max-width: 600px) {
+    h3 {
+        display: none;
+    }
+    .controls {
+      display: grid;
+      grid-template-areas: 
+      ".u."
+      "l.r"
+      ".d.";
+    }
+   #up {
+     grid-area: u;
+   }
+    #left {
+     grid-area: l;
+   }
+    #right {
+     grid-area: r;
+   }
+    #down {
+     grid-area: d;
+   }
+
+}
