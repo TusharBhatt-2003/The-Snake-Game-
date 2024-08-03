@@ -49,7 +49,7 @@ Component.Stage = function(canvas, conf) {
   this.food      = {};
   this.score     = 0;
   this.direction = 'none';
-  this.color     = 'rgb(170, 170, 170)';
+  this.color     = '#202426';
   this.conf      = {
     cw   : 10,
     size : 5,
@@ -134,7 +134,7 @@ Game.Draw = function(context, snake) {
     }
     
     // Draw White Stage
-		context.fillStyle = "black";
+		context.fillStyle = '#EDF2E9';
 		context.fillRect(0, 0, snake.stage.width, snake.stage.height);
 		
     // Snake Position
