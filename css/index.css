@@ -7,13 +7,15 @@ body {
     color: white;
     background-color: rgb(28, 27, 27);
     font-family: "Major Mono Display", monospace;
+  
   }
   canvas {
-    border: 1px solid rgb(255, 255, 255);
+    border: 7px double rgb(118, 169, 88);
     border-radius: 0.5em;
     box-sizing: border-box;
   
   }
+ 
 h3 {
     font-family: "Press Start 2P", system-ui;
     font-weight: lighter;
@@ -46,10 +48,23 @@ h3 {
     align-items: center;
     justify-content: center;
   }
-  
+  footer {
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    bottom: 0;
+    left:40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: c;
+  }
 
   /* Show buttons only on screens smaller than 600px */
   @media (max-width: 600px) {
+    body {
+        align-items: center;
+        justify-content: center;
+    }
     h3 {
         display: none;
     }
