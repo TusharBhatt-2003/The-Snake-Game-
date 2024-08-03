@@ -158,10 +158,10 @@ Game.Draw = function(context, snake) {
     }
     
     // Check Collision
-    if (this.collision(nx, ny) == true) {
-      snake.restart();
-      return;
-    }
+    if (this.collision(nx, ny)) {
+        snake.restart();
+        return;
+      }
     
     // Logic of Snake food
     if (nx == snake.stage.food.x && ny == snake.stage.food.y) {
@@ -199,11 +199,11 @@ Game.Draw = function(context, snake) {
   
   // Check Collision with walls
   this.collision = function(nx, ny) {  
-    if (nx == -1 || nx == (snake.stage.width / snake.stage.conf.cw) || ny == -1 || ny == (snake.stage.height / snake.stage.conf.cw)) {
+    if (nx < 0 || nx >= (snake.stage.width / snake.stage.conf.cw) || ny < 0 || ny >= (snake.stage.height / snake.stage.conf.cw)) {
       return true;
     }
     return false;    
-	}
+  }
 };
 
 /**
@@ -234,7 +234,7 @@ Game.Snake = function(elementId, conf) {
 
   // Change color on key press (C key)
   document.addEventListener('keydown', function(event) {
-    if (event.key === 'c' || 'C') {
+    if (event.key === 'c') {
       var newColor = '#' + Math.floor(Math.random()*16777215).toString(16);
       snake.stage.changeColor(newColor);
       
